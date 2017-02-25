@@ -1,0 +1,17 @@
+
+{% for category in site.categories %}
+<ul>
+<h2>{{ category | first }}</h2>
+	{% for posts in category %}
+	   {% for post in posts %}
+	     {% if post.url %}
+	      <li>
+	        <a class="{% if page.url == post.url %}active{% endif%}" href="{{ post.url }}">
+	          {{ post.title }}
+	        </a>
+	      </li>
+	    {% endif %}
+	  {% endfor %}
+	{% endfor %}
+</ul>
+{% endfor %}
