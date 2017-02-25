@@ -6,7 +6,7 @@
 	   {% for post in posts %}
 	     {% if post.url %}
 	      <li>
-	        <a class="{% if page.url == post.url %}active{% endif%}" href="{{ post.url }}">
+	        <a class="{% if page.url == post.url %}active{% endif%}" href="{{ post.url | prepend: site.baseurl }}">
 	          {{ post.title }}
 	        </a>
 	      </li>
