@@ -15,7 +15,7 @@ layout: default
 <ul>
 {% for category in site.categories limit: 3 %}
 		<li>
-	    <a href="{{ site.posts.first.url }}">
+	    <a href="{{ site.posts.first.url | prepend: site.baseurl }}">
 	          {{ category | first }}
 	      </a>
 	     </li>
